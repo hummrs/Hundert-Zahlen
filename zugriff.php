@@ -17,13 +17,35 @@
             padding: 40px;
             text-align: center;
         }
+        .prime{
+            background-color: yellow;
+        }
     </style>
 
 </head>
+
 <body>
     
     <!--Überschrift-->
     <h1>Hundert Zahlen</h1>
+
+    <?php
+
+        function isPrime($num) {
+            if ($num <= 1) {
+                return false;
+            }
+            
+            for ($i = 2; $i <= sqrt($num); $i++) {
+                if ($num % $i == 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+    ?>
 
     <table>
 
@@ -36,12 +58,16 @@
                         echo "<tr>";
                     }
 
-                    echo "<td>", ($i * 2), "</td>";
-
-
+                    if(isPrime($i)){
+                        echo "<td class=\"prime\">", $i , "</td>";
+                    }else{
+                        echo "<td>", $i, "</td>";
+                    }
+                    
                     if($i % 10 == 0){
                         echo "</tr>";
                     }
+                    
                 }
             ?>
         </tbody>
