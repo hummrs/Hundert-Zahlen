@@ -21,10 +21,10 @@
             background-color: yellow;
         }
         .yellow-rectangle {
-            width: 40px; /* Breite des Rechtecks */
-            height: 40px; /* Höhe des Rechtecks */
-            background-color: yellow; /* Hintergrundfarbe gelb */
-            border: 0.5px solid black; /* Optional: Schwarzer Rand */
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border: 0.5px solid black;
         }
     </style>
 
@@ -42,7 +42,7 @@
                 return false;
             }
             
-            for ($i = 2; $i <= sqrt($num); $i++) {
+            for ($i = 2; $i <= $num / 2; $i++) {
                 if ($num % $i == 0) {
                     return false;
                 }
