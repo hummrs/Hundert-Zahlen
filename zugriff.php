@@ -25,15 +25,8 @@
     <!--Überschrift-->
     <h1>Hundert Zahlen</h1>
 
-    <?php
-        $zahlen = range(1, 100);
-    ?>
-
     <table>
-        <thead>
-            <tr>
-            </tr>
-        </thead>
+
         <tbody>
             <!--php code-->
             <?php
@@ -52,6 +45,7 @@
                 }
             ?>
         </tbody>
+        
     </table>
     
 </body>
