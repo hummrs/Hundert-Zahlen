@@ -20,6 +20,12 @@
         .prime{
             background-color: yellow;
         }
+        .yellow-rectangle {
+            width: 40px; /* Breite des Rechtecks */
+            height: 40px; /* Höhe des Rechtecks */
+            background-color: yellow; /* Hintergrundfarbe gelb */
+            border: 0.5px solid black; /* Optional: Schwarzer Rand */
+        }
     </style>
 
 </head>
@@ -52,6 +58,9 @@
         <tbody>
             <!--php code-->
             <?php
+
+                $primeCount = 0;
+
                 for($i = 1; $i <= 100; $i++){
 
                     if($i % 10 == 1){
@@ -60,6 +69,7 @@
 
                     if(isPrime($i)){
                         echo "<td class=\"prime\">", $i , "</td>";
+                        $primeCount ++;
                     }else{
                         echo "<td>", $i, "</td>";
                     }
@@ -67,12 +77,21 @@
                     if($i % 10 == 0){
                         echo "</tr>";
                     }
-                    
+
                 }
             ?>
         </tbody>
         
     </table>
+
+    <br>
+    <br>
+
+    <div class="yellow-rectangle"></div>
+    <?php
+        echo "<p>", $primeCount, " Primzahlen", "<p>";
+    ?>
+
     
 </body>
 </html>
